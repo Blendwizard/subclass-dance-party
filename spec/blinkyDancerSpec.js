@@ -3,9 +3,11 @@ describe('blinkyDancer', function() {
   var blinkyDancer, clock;
   var timeBetweenSteps = 100;
 
+  // Joe added 'new' in front of makeBlinkyDancer on line 10
+
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
